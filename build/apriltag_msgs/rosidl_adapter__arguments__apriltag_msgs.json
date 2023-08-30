@@ -1,0 +1,8 @@
+{
+  "package_name": "apriltag_msgs",
+  "non_idl_tuples": [
+    "/home/ubt/workspace/jazzy_ws/apriltag_ros/apriltag_msgs:msg/Point.msg",
+    "/home/ubt/workspace/jazzy_ws/apriltag_ros/apriltag_msgs:msg/AprilTagDetection.msg",
+    "/home/ubt/workspace/jazzy_ws/apriltag_ros/apriltag_msgs:msg/AprilTagDetectionArray.msg"
+  ]
+}

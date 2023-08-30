@@ -1,0 +1,28 @@
+{
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "ROSA build",
+			"command": "source",
+			"args": [
+				"/opt/ros/jazzy/setup.bash",
+				"&&",
+				"colcon",
+				"build",
+				"--cmake-args",
+				"-DCMAKE_BUILD_TYPE=Debug",
+				"-DCMAKE_EXPORT_COMPILE_COMMANDS=Yes",
+				"--symlink-install",
+				"&&",
+				"source",
+				"install/setup.bash"
+			],
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	],
+	"version": "2.0.0"
+}

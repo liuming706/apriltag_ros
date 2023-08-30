@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ubt/workspace/jazzy_ws/apriltag_ros/build/apriltag_msgs/rosidl_generator_py/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_c.so" "TARGETS" "apriltag_msgs_s__rosidl_typesupport_c" "DESTINATION" "lib/python3.12/site-packages/apriltag_msgs")

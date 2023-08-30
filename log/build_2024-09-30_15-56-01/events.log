@@ -1,0 +1,374 @@
+[0.000000] (-) TimerEvent: {}
+[0.000277] (apriltag_msgs) JobQueued: {'identifier': 'apriltag_msgs', 'dependencies': OrderedDict()}
+[0.000316] (apriltag_ros) JobQueued: {'identifier': 'apriltag_ros', 'dependencies': OrderedDict({'apriltag_msgs': '/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs'})}
+[0.000704] (apriltag_msgs) JobStarted: {'identifier': 'apriltag_msgs'}
+[0.008634] (apriltag_msgs) JobProgress: {'identifier': 'apriltag_msgs', 'progress': 'cmake'}
+[0.008806] (apriltag_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/ubt/workspace/jazzy_ws/apriltag_ros/apriltag_msgs', '-DCMAKE_BUILD_TYPE=Debug', '-DCMAKE_EXPORT_COMPILE_COMMANDS=Yes', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs'], 'cwd': '/home/ubt/workspace/jazzy_ws/apriltag_ros/build/apriltag_msgs', 'env': OrderedDict({'USER': 'ubt', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'lumen-U', 'GIT_ASKPASS': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/helpers/browser.sh', 'HOME': '/home/ubt', 'TERM_PROGRAM_VERSION': '1.93.1', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-ac827469-9276-459a-b642-2a1321c690a5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-400e4969-a922-4a1e-a387-43d8a2841960.sock', 'SUMO_HOME': '/usr/share/sumo', '_': '/usr/local/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm-256color', 'PATH': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-400e4969-a922-4a1e-a387-43d8a2841960.sock","/home/ubt/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': '', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-676aed2eed.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-400e4969-a922-4a1e-a387-43d8a2841960.sock', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ubt/workspace/jazzy_ws/apriltag_ros/build/apriltag_msgs', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099994] (-) TimerEvent: {}
+[0.169462] (apriltag_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.2.0\n'}
+[0.200081] (-) TimerEvent: {}
+[0.294721] (apriltag_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.2.0\n'}
+[0.300160] (-) TimerEvent: {}
+[0.311289] (apriltag_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.355716] (apriltag_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.361305] (apriltag_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.361697] (apriltag_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.362091] (apriltag_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.370106] (apriltag_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.400246] (-) TimerEvent: {}
+[0.416468] (apriltag_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.422172] (apriltag_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.422370] (apriltag_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.422644] (apriltag_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.438838] (apriltag_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.500335] (-) TimerEvent: {}
+[0.538412] (apriltag_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.589875] (apriltag_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.600419] (-) TimerEvent: {}
+[0.637692] (apriltag_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[0.647198] (apriltag_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.700515] (-) TimerEvent: {}
+[0.726971] (apriltag_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.776664] (apriltag_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.3 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[0.781981] (apriltag_msgs) StdoutLine: {'line': b'-- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[0.800610] (-) TimerEvent: {}
+[0.900827] (-) TimerEvent: {}
+[1.001050] (-) TimerEvent: {}
+[1.101249] (-) TimerEvent: {}
+[1.186883] (apriltag_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[1.201322] (-) TimerEvent: {}
+[1.301508] (-) TimerEvent: {}
+[1.401735] (-) TimerEvent: {}
+[1.486216] (apriltag_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.501830] (-) TimerEvent: {}
+[1.602133] (-) TimerEvent: {}
+[1.702346] (-) TimerEvent: {}
+[1.802560] (-) TimerEvent: {}
+[1.876506] (apriltag_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.879946] (apriltag_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[1.902643] (-) TimerEvent: {}
+[1.957191] (apriltag_msgs) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[2.002761] (-) TimerEvent: {}
+[2.102960] (-) TimerEvent: {}
+[2.203153] (-) TimerEvent: {}
+[2.216353] (apriltag_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[2.248548] (apriltag_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[2.277505] (apriltag_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.278747] (apriltag_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.281637] (apriltag_msgs) StdoutLine: {'line': b'-- Configuring done (2.3s)\n'}
+[2.303222] (-) TimerEvent: {}
+[2.304084] (apriltag_msgs) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.305651] (apriltag_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/ubt/workspace/jazzy_ws/apriltag_ros/build/apriltag_msgs\n'}
+[2.308389] (apriltag_msgs) CommandEnded: {'returncode': 0}
+[2.309200] (apriltag_msgs) JobProgress: {'identifier': 'apriltag_msgs', 'progress': 'build'}
+[2.309237] (apriltag_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubt/workspace/jazzy_ws/apriltag_ros/build/apriltag_msgs', '--', '-j24', '-l24'], 'cwd': '/home/ubt/workspace/jazzy_ws/apriltag_ros/build/apriltag_msgs', 'env': OrderedDict({'USER': 'ubt', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'lumen-U', 'GIT_ASKPASS': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/helpers/browser.sh', 'HOME': '/home/ubt', 'TERM_PROGRAM_VERSION': '1.93.1', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-ac827469-9276-459a-b642-2a1321c690a5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-400e4969-a922-4a1e-a387-43d8a2841960.sock', 'SUMO_HOME': '/usr/share/sumo', '_': '/usr/local/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm-256color', 'PATH': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-400e4969-a922-4a1e-a387-43d8a2841960.sock","/home/ubt/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': '', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-676aed2eed.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-400e4969-a922-4a1e-a387-43d8a2841960.sock', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ubt/workspace/jazzy_ws/apriltag_ros/build/apriltag_msgs', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[2.323281] (apriltag_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[2.324322] (apriltag_msgs) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_symlink_apriltag_msgs\n'}
+[2.403309] (-) TimerEvent: {}
+[2.426076] (apriltag_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[2.426533] (apriltag_msgs) StdoutLine: {'line': b'creating apriltag_msgs.egg-info\n'}
+[2.434220] (apriltag_msgs) StdoutLine: {'line': b'writing apriltag_msgs.egg-info/PKG-INFO\n'}
+[2.434329] (apriltag_msgs) StdoutLine: {'line': b'writing dependency_links to apriltag_msgs.egg-info/dependency_links.txt\n'}
+[2.434412] (apriltag_msgs) StdoutLine: {'line': b'writing top-level names to apriltag_msgs.egg-info/top_level.txt\n'}
+[2.434477] (apriltag_msgs) StdoutLine: {'line': b"writing manifest file 'apriltag_msgs.egg-info/SOURCES.txt'\n"}
+[2.448098] (apriltag_msgs) StdoutLine: {'line': b'[  1%] Built target apriltag_msgs__rosidl_generator_type_description\n'}
+[2.451343] (apriltag_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.454299] (apriltag_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.458487] (apriltag_msgs) StdoutLine: {'line': b"reading manifest file 'apriltag_msgs.egg-info/SOURCES.txt'\n"}
+[2.458777] (apriltag_msgs) StdoutLine: {'line': b"writing manifest file 'apriltag_msgs.egg-info/SOURCES.txt'\n"}
+[2.469724] (apriltag_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_apriltag_msgs_egg\n'}
+[2.503373] (-) TimerEvent: {}
+[2.603516] (-) TimerEvent: {}
+[2.616816] (apriltag_msgs) StdoutLine: {'line': b'[  5%] Built target apriltag_msgs__cpp\n'}
+[2.636257] (apriltag_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_generator_c.dir/rosidl_generator_c/apriltag_msgs/msg/detail/point__description.c.o\x1b[0m\n'}
+[2.636376] (apriltag_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_generator_c.dir/rosidl_generator_c/apriltag_msgs/msg/detail/point__type_support.c.o\x1b[0m\n'}
+[2.636410] (apriltag_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_generator_c.dir/rosidl_generator_c/apriltag_msgs/msg/detail/april_tag_detection__functions.c.o\x1b[0m\n'}
+[2.636441] (apriltag_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_generator_c.dir/rosidl_generator_c/apriltag_msgs/msg/detail/april_tag_detection__description.c.o\x1b[0m\n'}
+[2.636487] (apriltag_msgs) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_generator_c.dir/rosidl_generator_c/apriltag_msgs/msg/detail/april_tag_detection_array__description.c.o\x1b[0m\n'}
+[2.636520] (apriltag_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_generator_c.dir/rosidl_generator_c/apriltag_msgs/msg/detail/point__functions.c.o\x1b[0m\n'}
+[2.636546] (apriltag_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_generator_c.dir/rosidl_generator_c/apriltag_msgs/msg/detail/april_tag_detection_array__functions.c.o\x1b[0m\n'}
+[2.636718] (apriltag_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_generator_c.dir/rosidl_generator_c/apriltag_msgs/msg/detail/april_tag_detection__type_support.c.o\x1b[0m\n'}
+[2.637047] (apriltag_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_generator_c.dir/rosidl_generator_c/apriltag_msgs/msg/detail/april_tag_detection_array__type_support.c.o\x1b[0m\n'}
+[2.676672] (apriltag_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32m\x1b[1mLinking C shared library libapriltag_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[2.691530] (apriltag_msgs) StdoutLine: {'line': b'[ 24%] Built target apriltag_msgs__rosidl_generator_c\n'}
+[2.694248] (apriltag_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.694393] (apriltag_msgs) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.694440] (apriltag_msgs) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.694471] (apriltag_msgs) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.694637] (apriltag_msgs) StdoutLine: {'line': b'[ 33%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.694916] (apriltag_msgs) StdoutLine: {'line': b'[ 35%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.703587] (-) TimerEvent: {}
+[2.803750] (-) TimerEvent: {}
+[2.829597] (apriltag_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/apriltag_msgs/msg/point__type_support.cpp.o\x1b[0m\n'}
+[2.829776] (apriltag_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/apriltag_msgs/msg/april_tag_detection__type_support.cpp.o\x1b[0m\n'}
+[2.829868] (apriltag_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/apriltag_msgs/msg/april_tag_detection_array__type_support.cpp.o\x1b[0m\n'}
+[2.831516] (apriltag_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/apriltag_msgs/msg/april_tag_detection__type_support.cpp.o\x1b[0m\n'}
+[2.831683] (apriltag_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/apriltag_msgs/msg/april_tag_detection_array__type_support.cpp.o\x1b[0m\n'}
+[2.831941] (apriltag_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/apriltag_msgs/msg/point__type_support.cpp.o\x1b[0m\n'}
+[2.841259] (apriltag_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/apriltag_msgs/msg/detail/april_tag_detection__type_support.c.o\x1b[0m\n'}
+[2.841444] (apriltag_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/apriltag_msgs/msg/detail/april_tag_detection_array__type_support.c.o\x1b[0m\n'}
+[2.841789] (apriltag_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/apriltag_msgs/msg/detail/point__type_support.c.o\x1b[0m\n'}
+[2.842473] (apriltag_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/apriltag_msgs/msg/detail/point__type_support.cpp.o\x1b[0m\n'}
+[2.842766] (apriltag_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/apriltag_msgs/msg/detail/april_tag_detection_array__type_support.cpp.o\x1b[0m\n'}
+[2.843445] (apriltag_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/apriltag_msgs/msg/detail/april_tag_detection__type_support.cpp.o\x1b[0m\n'}
+[2.867076] (apriltag_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/apriltag_msgs/msg/detail/dds_fastrtps/april_tag_detection__type_support.cpp.o\x1b[0m\n'}
+[2.867300] (apriltag_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/apriltag_msgs/msg/detail/dds_fastrtps/point__type_support.cpp.o\x1b[0m\n'}
+[2.867527] (apriltag_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libapriltag_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.867637] (apriltag_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/apriltag_msgs/msg/detail/dds_fastrtps/april_tag_detection_array__type_support.cpp.o\x1b[0m\n'}
+[2.868326] (apriltag_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/apriltag_msgs/msg/detail/point__type_support_c.cpp.o\x1b[0m\n'}
+[2.869148] (apriltag_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking C shared library libapriltag_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.869297] (apriltag_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/apriltag_msgs/msg/detail/april_tag_detection__type_support_c.cpp.o\x1b[0m\n'}
+[2.869397] (apriltag_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/apriltag_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/apriltag_msgs/msg/detail/april_tag_detection_array__type_support_c.cpp.o\x1b[0m\n'}
+[2.879728] (apriltag_msgs) StdoutLine: {'line': b'[ 72%] Built target apriltag_msgs__rosidl_typesupport_introspection_c\n'}
+[2.885419] (apriltag_msgs) StdoutLine: {'line': b'[ 72%] Built target apriltag_msgs__rosidl_typesupport_c\n'}
+[2.903850] (-) TimerEvent: {}
+[3.004111] (-) TimerEvent: {}
+[3.067629] (apriltag_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libapriltag_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[3.103599] (apriltag_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library libapriltag_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[3.104167] (-) TimerEvent: {}
+[3.105831] (apriltag_msgs) StdoutLine: {'line': b'[ 75%] Built target apriltag_msgs__rosidl_typesupport_introspection_cpp\n'}
+[3.125471] (apriltag_msgs) StdoutLine: {'line': b'[ 75%] Built target apriltag_msgs__rosidl_typesupport_cpp\n'}
+[3.204271] (-) TimerEvent: {}
+[3.221524] (apriltag_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX shared library libapriltag_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[3.243667] (apriltag_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libapriltag_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[3.260924] (apriltag_msgs) StdoutLine: {'line': b'[ 79%] Built target apriltag_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[3.278723] (apriltag_msgs) StdoutLine: {'line': b'[ 79%] Built target apriltag_msgs__rosidl_typesupport_fastrtps_c\n'}
+[3.284051] (apriltag_msgs) StdoutLine: {'line': b'[ 79%] Built target apriltag_msgs\n'}
+[3.289793] (apriltag_msgs) StdoutLine: {'line': b'[ 81%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[3.304338] (-) TimerEvent: {}
+[3.404513] (-) TimerEvent: {}
+[3.504713] (-) TimerEvent: {}
+[3.509328] (apriltag_msgs) StdoutLine: {'line': b'[ 81%] Built target apriltag_msgs__py\n'}
+[3.514707] (apriltag_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_generator_py.dir/rosidl_generator_py/apriltag_msgs/msg/_point_s.c.o\x1b[0m\n'}
+[3.515262] (apriltag_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_generator_py.dir/rosidl_generator_py/apriltag_msgs/msg/_april_tag_detection_s.c.o\x1b[0m\n'}
+[3.515374] (apriltag_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs__rosidl_generator_py.dir/rosidl_generator_py/apriltag_msgs/msg/_april_tag_detection_array_s.c.o\x1b[0m\n'}
+[3.594403] (apriltag_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking C shared library libapriltag_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[3.604782] (-) TimerEvent: {}
+[3.616463] (apriltag_msgs) StdoutLine: {'line': b'[ 88%] Built target apriltag_msgs__rosidl_generator_py\n'}
+[3.622086] (apriltag_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[3.622232] (apriltag_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[3.622308] (apriltag_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/apriltag_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[3.683426] (apriltag_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[3.683598] (apriltag_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[3.683843] (apriltag_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[3.698047] (apriltag_msgs) StdoutLine: {'line': b'[100%] Built target apriltag_msgs_s__rosidl_typesupport_c\n'}
+[3.698448] (apriltag_msgs) StdoutLine: {'line': b'[100%] Built target apriltag_msgs_s__rosidl_typesupport_introspection_c\n'}
+[3.698645] (apriltag_msgs) StdoutLine: {'line': b'[100%] Built target apriltag_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[3.701635] (apriltag_msgs) CommandEnded: {'returncode': 0}
+[3.704840] (-) TimerEvent: {}
+[3.768391] (apriltag_msgs) JobProgress: {'identifier': 'apriltag_msgs', 'progress': 'install'}
+[3.769899] (apriltag_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ubt/workspace/jazzy_ws/apriltag_ros/build/apriltag_msgs'], 'cwd': '/home/ubt/workspace/jazzy_ws/apriltag_ros/build/apriltag_msgs', 'env': OrderedDict({'USER': 'ubt', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'lumen-U', 'GIT_ASKPASS': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/helpers/browser.sh', 'HOME': '/home/ubt', 'TERM_PROGRAM_VERSION': '1.93.1', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-ac827469-9276-459a-b642-2a1321c690a5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-400e4969-a922-4a1e-a387-43d8a2841960.sock', 'SUMO_HOME': '/usr/share/sumo', '_': '/usr/local/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm-256color', 'PATH': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-400e4969-a922-4a1e-a387-43d8a2841960.sock","/home/ubt/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': '', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-676aed2eed.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-400e4969-a922-4a1e-a387-43d8a2841960.sock', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ubt/workspace/jazzy_ws/apriltag_ros/build/apriltag_msgs', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[3.771610] (apriltag_msgs) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[3.771967] (apriltag_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.772110] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/ament_index/resource_index/rosidl_interfaces/apriltag_msgs\n'}
+[3.773619] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/msg/Point.json\n'}
+[3.774697] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/msg/AprilTagDetection.json\n'}
+[3.776043] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/msg/AprilTagDetectionArray.json\n'}
+[3.777586] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/april_tag_detection.h\n'}
+[3.778633] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/april_tag_detection_array.h\n'}
+[3.779913] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__functions.h\n'}
+[3.781153] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__struct.h\n'}
+[3.782608] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__type_support.h\n'}
+[3.783993] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__functions.h\n'}
+[3.785325] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__struct.h\n'}
+[3.786570] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__type_support.h\n'}
+[3.788012] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__functions.h\n'}
+[3.789276] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__struct.h\n'}
+[3.790546] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__type_support.h\n'}
+[3.791643] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/point.h\n'}
+[3.792994] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.794320] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/environment/library_path.sh\n'}
+[3.795571] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/environment/library_path.dsv\n'}
+[3.797122] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__rosidl_typesupport_fastrtps_c.h\n'}
+[3.798355] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__rosidl_typesupport_fastrtps_c.h\n'}
+[3.799655] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__rosidl_typesupport_fastrtps_c.h\n'}
+[3.800945] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.802455] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__rosidl_typesupport_introspection_c.h\n'}
+[3.803565] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__rosidl_typesupport_introspection_c.h\n'}
+[3.804902] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__rosidl_typesupport_introspection_c.h\n'}
+[3.804970] (-) TimerEvent: {}
+[3.805895] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.807363] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/april_tag_detection.hpp\n'}
+[3.808700] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/april_tag_detection_array.hpp\n'}
+[3.809997] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__builder.hpp\n'}
+[3.811342] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__struct.hpp\n'}
+[3.812489] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__traits.hpp\n'}
+[3.813746] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__type_support.hpp\n'}
+[3.814815] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__builder.hpp\n'}
+[3.816086] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__struct.hpp\n'}
+[3.817387] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__traits.hpp\n'}
+[3.818622] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__type_support.hpp\n'}
+[3.819709] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__builder.hpp\n'}
+[3.821096] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__struct.hpp\n'}
+[3.822318] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__traits.hpp\n'}
+[3.823624] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__type_support.hpp\n'}
+[3.824902] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/point.hpp\n'}
+[3.826160] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[3.827665] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.829012] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.830348] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.831627] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.833049] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.834373] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/april_tag_detection_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.835644] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/include/apriltag_msgs/apriltag_msgs/msg/detail/point__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.837002] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/environment/pythonpath.sh\n'}
+[3.838336] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/environment/pythonpath.dsv\n'}
+[3.839748] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs-2.0.1-py3.12.egg-info/PKG-INFO\n'}
+[3.840756] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs-2.0.1-py3.12.egg-info/SOURCES.txt\n'}
+[3.842136] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs-2.0.1-py3.12.egg-info/dependency_links.txt\n'}
+[3.843337] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs-2.0.1-py3.12.egg-info/top_level.txt\n'}
+[3.844929] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/__init__.py\n'}
+[3.846221] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[3.847436] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[3.848553] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/_apriltag_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[3.849935] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_c.so\n'}
+[3.851183] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[3.852518] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[3.853675] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/msg/__init__.py\n'}
+[3.854686] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/msg/_april_tag_detection.py\n'}
+[3.855732] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/msg/_april_tag_detection_array.py\n'}
+[3.857000] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/msg/_april_tag_detection_array_s.c\n'}
+[3.858242] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/msg/_april_tag_detection_s.c\n'}
+[3.859509] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/msg/_point.py\n'}
+[3.860824] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/msg/_point_s.c\n'}
+[3.862203] (apriltag_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[3.862327] (apriltag_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[3.862438] (apriltag_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/apriltag_msgs_s__rosidl_typesupport_c.so\n'}
+[3.862497] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/msg/Point.idl\n'}
+[3.863804] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/msg/AprilTagDetection.idl\n'}
+[3.865173] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/msg/AprilTagDetectionArray.idl\n'}
+[3.866524] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/msg/Point.msg\n'}
+[3.867799] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/msg/AprilTagDetection.msg\n'}
+[3.868828] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/msg/AprilTagDetectionArray.msg\n'}
+[3.870255] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/ament_index/resource_index/package_run_dependencies/apriltag_msgs\n'}
+[3.871584] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/ament_index/resource_index/parent_prefix_path/apriltag_msgs\n'}
+[3.872676] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/environment/ament_prefix_path.sh\n'}
+[3.873788] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/environment/ament_prefix_path.dsv\n'}
+[3.875086] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/environment/path.sh\n'}
+[3.876351] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/environment/path.dsv\n'}
+[3.877528] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/local_setup.bash\n'}
+[3.878620] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/local_setup.sh\n'}
+[3.879969] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/local_setup.zsh\n'}
+[3.881489] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/local_setup.dsv\n'}
+[3.882941] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/package.dsv\n'}
+[3.884308] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/ament_index/resource_index/packages/apriltag_msgs\n'}
+[3.885610] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[3.886905] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.888358] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.889703] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.890726] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.892092] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.893382] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.894714] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgsConfig.cmake\n'}
+[3.896187] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgsConfig-version.cmake\n'}
+[3.897425] (apriltag_msgs) StdoutLine: {'line': b'-- Symlinking: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/package.xml\n'}
+[3.898815] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_generator_c.so\n'}
+[3.899036] (apriltag_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_generator_c.so" to ""\n'}
+[3.899078] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[3.899379] (apriltag_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[3.899427] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_introspection_c.so\n'}
+[3.899604] (apriltag_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[3.899638] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_c.so\n'}
+[3.899761] (apriltag_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_c.so" to ""\n'}
+[3.899795] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.900108] (apriltag_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[3.900146] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[3.900371] (apriltag_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[3.900406] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_cpp.so\n'}
+[3.900561] (apriltag_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[3.905029] (-) TimerEvent: {}
+[3.926369] (apriltag_msgs) StdoutLine: {'line': b"Listing '/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs'...\n"}
+[3.926473] (apriltag_msgs) StdoutLine: {'line': b"Compiling '/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/__init__.py'...\n"}
+[3.926511] (apriltag_msgs) StdoutLine: {'line': b"Listing '/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/msg'...\n"}
+[3.926540] (apriltag_msgs) StdoutLine: {'line': b"Compiling '/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/msg/__init__.py'...\n"}
+[3.926567] (apriltag_msgs) StdoutLine: {'line': b"Compiling '/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/msg/_april_tag_detection.py'...\n"}
+[3.926593] (apriltag_msgs) StdoutLine: {'line': b"Compiling '/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/msg/_april_tag_detection_array.py'...\n"}
+[3.926618] (apriltag_msgs) StdoutLine: {'line': b"Compiling '/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages/apriltag_msgs/msg/_point.py'...\n"}
+[3.929172] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_generator_py.so\n'}
+[3.929392] (apriltag_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/libapriltag_msgs__rosidl_generator_py.so" to ""\n'}
+[3.929429] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_generator_cExport.cmake\n'}
+[3.929499] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_generator_cExport-debug.cmake\n'}
+[3.929565] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[3.929628] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_typesupport_fastrtps_cExport-debug.cmake\n'}
+[3.929690] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.929746] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_introspection_cExport-debug.cmake\n'}
+[3.929809] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_cExport.cmake\n'}
+[3.929873] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_cExport-debug.cmake\n'}
+[3.929935] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_generator_cppExport.cmake\n'}
+[3.930019] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[3.930065] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_typesupport_fastrtps_cppExport-debug.cmake\n'}
+[3.930125] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.930182] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_introspection_cppExport-debug.cmake\n'}
+[3.930244] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[3.930302] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/apriltag_msgs__rosidl_typesupport_cppExport-debug.cmake\n'}
+[3.930363] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_generator_pyExport.cmake\n'}
+[3.930421] (apriltag_msgs) StdoutLine: {'line': b'-- Installing: /home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake/export_apriltag_msgs__rosidl_generator_pyExport-debug.cmake\n'}
+[3.931117] (apriltag_msgs) CommandEnded: {'returncode': 0}
+[4.005111] (-) TimerEvent: {}
+[4.013016] (apriltag_msgs) JobEnded: {'identifier': 'apriltag_msgs', 'rc': 0}
+[4.013418] (apriltag_ros) JobStarted: {'identifier': 'apriltag_ros'}
+[4.018401] (apriltag_ros) JobProgress: {'identifier': 'apriltag_ros', 'progress': 'cmake'}
+[4.018531] (apriltag_ros) Command: {'cmd': ['/usr/bin/cmake', '/home/ubt/workspace/jazzy_ws/apriltag_ros/apriltag_ros', '-DCMAKE_BUILD_TYPE=Debug', '-DCMAKE_EXPORT_COMPILE_COMMANDS=Yes', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_ros'], 'cwd': '/home/ubt/workspace/jazzy_ws/apriltag_ros/build/apriltag_ros', 'env': OrderedDict({'USER': 'ubt', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'lumen-U', 'GIT_ASKPASS': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/helpers/browser.sh', 'HOME': '/home/ubt', 'TERM_PROGRAM_VERSION': '1.93.1', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-ac827469-9276-459a-b642-2a1321c690a5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-400e4969-a922-4a1e-a387-43d8a2841960.sock', 'SUMO_HOME': '/usr/share/sumo', '_': '/usr/local/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm-256color', 'PATH': '/home/ubt/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-400e4969-a922-4a1e-a387-43d8a2841960.sock","/home/ubt/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': '', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-676aed2eed.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-400e4969-a922-4a1e-a387-43d8a2841960.sock', 'AMENT_PREFIX_PATH': '/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ubt/workspace/jazzy_ws/apriltag_ros/build/apriltag_ros', 'PYTHONPATH': '/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[4.050485] (apriltag_ros) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.2.0\n'}
+[4.082477] (apriltag_ros) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.2.0\n'}
+[4.092100] (apriltag_ros) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.105181] (-) TimerEvent: {}
+[4.132639] (apriltag_ros) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.139754] (apriltag_ros) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.139938] (apriltag_ros) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.140151] (apriltag_ros) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.145781] (apriltag_ros) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.192925] (apriltag_ros) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[4.199209] (apriltag_ros) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[4.199395] (apriltag_ros) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[4.199674] (apriltag_ros) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[4.203300] (apriltag_ros) StdoutLine: {'line': b'-- Found rclcpp: 28.1.3 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[4.205232] (-) TimerEvent: {}
+[4.291172] (apriltag_ros) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[4.305306] (-) TimerEvent: {}
+[4.332460] (apriltag_ros) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[4.397594] (apriltag_ros) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.3 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[4.405362] (-) TimerEvent: {}
+[4.408368] (apriltag_ros) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.3 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[4.421187] (apriltag_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.434923] (apriltag_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.505451] (-) TimerEvent: {}
+[4.511449] (apriltag_ros) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[4.515616] (apriltag_ros) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[4.589128] (apriltag_ros) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[4.602129] (apriltag_ros) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[4.605504] (-) TimerEvent: {}
+[4.618374] (apriltag_ros) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.690053] (apriltag_ros) StdoutLine: {'line': b'-- Found rclcpp_components: 28.1.3 (/opt/ros/jazzy/share/rclcpp_components/cmake)\n'}
+[4.705574] (-) TimerEvent: {}
+[4.726415] (apriltag_ros) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[4.774118] (apriltag_ros) StdoutLine: {'line': b'-- Found apriltag_msgs: 2.0.1 (/home/ubt/workspace/jazzy_ws/apriltag_ros/install/apriltag_msgs/share/apriltag_msgs/cmake)\n'}
+[4.785682] (apriltag_ros) StdoutLine: {'line': b'-- Found tf2_ros: 0.36.4 (/opt/ros/jazzy/share/tf2_ros/cmake)\n'}
+[4.805659] (-) TimerEvent: {}
+[4.876878] (apriltag_ros) StdoutLine: {'line': b'-- Found image_transport: 5.1.4 (/opt/ros/jazzy/share/image_transport/cmake)\n'}
+[4.889697] (apriltag_ros) StdoutLine: {'line': b'-- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)\n'}
+[4.905741] (-) TimerEvent: {}
+[4.908750] (apriltag_ros) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[4.947591] (apriltag_ros) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[4.948348] (apriltag_ros) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[4.956870] (apriltag_ros) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:44 (find_package):\n'}
+[4.956955] (apriltag_ros) StderrLine: {'line': b'  By not providing "Findapriltag.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[4.956989] (apriltag_ros) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "apriltag",\n'}
+[4.957021] (apriltag_ros) StderrLine: {'line': b'  but CMake did not find one.\n'}
+[4.957054] (apriltag_ros) StderrLine: {'line': b'\n'}
+[4.957083] (apriltag_ros) StderrLine: {'line': b'  Could not find a package configuration file provided by "apriltag"\n'}
+[4.957111] (apriltag_ros) StderrLine: {'line': b'  (requested version 3.2) with any of the following names:\n'}
+[4.957137] (apriltag_ros) StderrLine: {'line': b'\n'}
+[4.957179] (apriltag_ros) StderrLine: {'line': b'    apriltagConfig.cmake\n'}
+[4.957205] (apriltag_ros) StderrLine: {'line': b'    apriltag-config.cmake\n'}
+[4.957231] (apriltag_ros) StderrLine: {'line': b'\n'}
+[4.957256] (apriltag_ros) StderrLine: {'line': b'  Add the installation prefix of "apriltag" to CMAKE_PREFIX_PATH or set\n'}
+[4.957281] (apriltag_ros) StderrLine: {'line': b'  "apriltag_DIR" to a directory containing one of the above files.  If\n'}
+[4.957305] (apriltag_ros) StderrLine: {'line': b'  "apriltag" provides a separate development package or SDK, be sure it has\n'}
+[4.957329] (apriltag_ros) StderrLine: {'line': b'  been installed.\n'}
+[4.957354] (apriltag_ros) StderrLine: {'line': b'\n'}
+[4.957379] (apriltag_ros) StderrLine: {'line': b'\x1b[0m\n'}
+[4.957405] (apriltag_ros) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[4.961504] (apriltag_ros) CommandEnded: {'returncode': 1}
+[4.966465] (apriltag_ros) JobEnded: {'identifier': 'apriltag_ros', 'rc': 1}
+[4.976696] (-) EventReactorShutdown: {}
