@@ -42,6 +42,7 @@ find_package(cv_bridge REQUIRED)
 find_package(Eigen3 REQUIRED NO_MODULE)
 find_package(Threads REQUIRED)
 find_package(apriltag 3.2 REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 if(cv_bridge_VERSION VERSION_GREATER_EQUAL 3.3.0)
     add_compile_definitions(cv_bridge_HPP)
@@ -52,7 +53,7 @@ target_link_libraries(tags apriltag::apriltag)
 set_property(TARGET tags PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 add_library(AprilTagNode SHARED src/AprilTagNode.cpp)
-ament_target_dependencies(AprilTagNode rclcpp rclcpp_components sensor_msgs apriltag_msgs tf2_ros image_transport cv_bridge)
+ament_target_dependencies(AprilTagNode rclcpp rclcpp_components geometry_msgs sensor_msgs apriltag_msgs tf2_ros image_transport cv_bridge)
 target_link_libraries(AprilTagNode apriltag::apriltag tags Eigen3::Eigen)
 rclcpp_components_register_node(AprilTagNode PLUGIN "AprilTagNode" EXECUTABLE "apriltag_node")
 

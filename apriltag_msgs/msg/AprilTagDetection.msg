@@ -1,8 +1,14 @@
-string family
+# Tag ID(s). If a standalone tag, this is a vector of size 1. If a tag bundle,
+# this is a vector containing the IDs of each tag in the bundle.
 int32 id
-int32 hamming
-float32 goodness
-float32 decision_margin
-Point centre                    # centre in (x,y) pixel coordinates
-Point[4] corners                # corners of tag ((x1,y1),(x2,y2),...)
-float64[9] homography           # 3x3 row-major homography matrix
+
+# Tag size(s). If a standalone tag, this is a vector of size 1. If a tag bundle,
+# this is a vector containing the sizes of each tag in the bundle, in the same
+# order as the IDs above.
+float64 size
+
+# Pose in the camera frame, obtained from homography transform. If a standalone
+# tag, the homography is from the four tag corners. If a tag bundle, the
+# homography is from at least the four corners of one member tag and at most the
+# four corners of all member tags.
+geometry_msgs/PoseWithCovarianceStamped pose
