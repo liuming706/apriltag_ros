@@ -1,0 +1,7 @@
+repositories:
+  apriltag:
+    type: git
+    url: git@github.com:liuming706/apriltag.git
+    version: master
+
+ 

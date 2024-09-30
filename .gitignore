@@ -1,7 +1,11 @@
+tmp
+.catkin_workspace
+files/
+apriltag
 build
 install
-.vscode
 log
-*.wbproj
-save
 depends
+src/CMakeLists.txt
+
+

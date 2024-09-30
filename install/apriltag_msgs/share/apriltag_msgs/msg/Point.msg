@@ -1,1 +1,0 @@
-/home/ubt/workspace/jazzy_ws/apriltag_ros/apriltag_msgs/msg/Point.msg
