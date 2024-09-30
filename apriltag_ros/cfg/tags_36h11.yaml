@@ -10,9 +10,15 @@
             threads: 1          # number of threads
             decimate: 2.0       # decimate resolution for quad detection
             blur: 0.0           # sigma of Gaussian blur for quad detection
+<<<<<<< HEAD
             refine: True        # snap to strong gradients
             sharpening: 0.25    # sharpening of decoded images
             debug: False        # write additional debugging images to current working directory
+=======
+            refine: true           # snap to strong gradients
+            sharpening: 0.25    # sharpening of decoded images
+            debug: false           # write additional debugging images to current working directory
+>>>>>>> origin/master
 
         # optional list of tags
         #tag:

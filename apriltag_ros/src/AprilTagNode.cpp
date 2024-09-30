@@ -120,6 +120,9 @@ private:
     void onCamera(const sensor_msgs::msg::Image::ConstSharedPtr &msg_img,
                   const sensor_msgs::msg::CameraInfo::ConstSharedPtr &msg_ci);
 
+    void onCamera(const sensor_msgs::msg::Image::ConstSharedPtr &msg_img,
+                  const sensor_msgs::msg::CameraInfo::ConstSharedPtr &msg_ci);
+
     rcl_interfaces::msg::SetParametersResult onParameter(const std::vector<rclcpp::Parameter> &parameters);
 };
 
@@ -205,9 +208,10 @@ void AprilTagNode::onCamera(const sensor_msgs::msg::Image::ConstSharedPtr &msg_i
     // camera intrinsics for rectified images
     const std::array<double, 4> intrinsics = {msg_ci->p.data()[0], msg_ci->p.data()[5], msg_ci->p.data()[2],
                                               msg_ci->p.data()[6]};
-    // // precompute inverse projection matrix
-    // const Mat3 Pinv =
-    //     Eigen::Map<const Eigen::Matrix<double, 3, 4, Eigen::RowMajor> >(msg_ci->p.data()).leftCols<3>().inverse();
+
+    // precompute inverse projection matrix
+    const Mat3 Pinv =
+        Eigen::Map<const Eigen::Matrix<double, 3, 4, Eigen::RowMajor> >(msg_ci->p.data()).leftCols<3>().inverse();
 
     // convert to 8bit monochrome image
     const cv::Mat img_uint8 = cv_bridge::toCvShare(msg_img, "mono8")->image;
