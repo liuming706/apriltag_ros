@@ -96,8 +96,16 @@ public:
     ~AprilTagNode() override;
 
 private:
+    void onCamera(const sensor_msgs::msg::Image::ConstSharedPtr &msg_img,
+                  const sensor_msgs::msg::CameraInfo::ConstSharedPtr &msg_ci);
+
+    rcl_interfaces::msg::SetParametersResult onParameter(const std::vector<rclcpp::Parameter> &parameters);
+
+    void imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr &msg_img);
+    void cameraInfoCallback(const sensor_msgs::msg::CameraInfo::ConstSharedPtr &msg_ci);
     const OnSetParametersCallbackHandle::SharedPtr cb_parameter;
 
+private:
     apriltag_family_t *tf;
     apriltag_detector_t *const td;
 
@@ -111,16 +119,14 @@ private:
 
     std::function<void(apriltag_family_t *)> tf_destructor;
 
-    const image_transport::CameraSubscriber sub_cam;
+    // const image_transport::CameraSubscriber sub_cam;
+    rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr sub_img_;
+    rclcpp::Subscription<sensor_msgs::msg::CameraInfo>::SharedPtr sub_camera_info_;
+
     const rclcpp::Publisher<apriltag_msgs::msg::AprilTagDetectionArray>::SharedPtr pub_detections;
     tf2_ros::TransformBroadcaster tf_broadcaster;
-
+    std::unique_ptr<std::array<double, 4>> intrinsics_{nullptr};
     pose_estimation_f estimate_pose = nullptr;
-
-    void onCamera(const sensor_msgs::msg::Image::ConstSharedPtr &msg_img,
-                  const sensor_msgs::msg::CameraInfo::ConstSharedPtr &msg_ci);
-
-    rcl_interfaces::msg::SetParametersResult onParameter(const std::vector<rclcpp::Parameter> &parameters);
 };
 
 RCLCPP_COMPONENTS_REGISTER_NODE(AprilTagNode)
@@ -131,10 +137,10 @@ AprilTagNode::AprilTagNode(const rclcpp::NodeOptions &options) :
     cb_parameter(add_on_set_parameters_callback(std::bind(&AprilTagNode::onParameter, this, std::placeholders::_1))),
     td(apriltag_detector_create()),
     // topics
-    sub_cam(image_transport::create_camera_subscription(
-        this, this->get_node_topics_interface()->resolve_topic_name("image_rect"),
-        std::bind(&AprilTagNode::onCamera, this, std::placeholders::_1, std::placeholders::_2),
-        declare_parameter("image_transport", "raw", descr({}, true)), rmw_qos_profile_sensor_data)),
+    // sub_cam(image_transport::create_camera_subscription(
+    //     this, this->get_node_topics_interface()->resolve_topic_name("image_rect"),
+    //     std::bind(&AprilTagNode::onCamera, this, std::placeholders::_1, std::placeholders::_2),
+    //     declare_parameter("image_transport", "raw", descr({}, true)), rmw_qos_profile_sensor_data)),
     pub_detections(create_publisher<apriltag_msgs::msg::AprilTagDetectionArray>("detections", rclcpp::QoS(1))),
     tf_broadcaster(this)
 {
@@ -191,6 +197,12 @@ AprilTagNode::AprilTagNode(const rclcpp::NodeOptions &options) :
     } else {
         throw std::runtime_error("Unsupported tag family: " + tag_family);
     }
+    sub_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
+        this->get_node_topics_interface()->resolve_topic_name("camera_info"), 10,
+        std::bind(&AprilTagNode::cameraInfoCallback, this, std::placeholders::_1));
+    sub_img_ = this->create_subscription<sensor_msgs::msg::Image>(
+        this->get_node_topics_interface()->resolve_topic_name("image"), 10,
+        std::bind(&AprilTagNode::imageCallback, this, std::placeholders::_1));
 }
 
 AprilTagNode::~AprilTagNode()
@@ -201,6 +213,7 @@ AprilTagNode::~AprilTagNode()
 
 void AprilTagNode::onCamera(const sensor_msgs::msg::Image::ConstSharedPtr &msg_img,
                             const sensor_msgs::msg::CameraInfo::ConstSharedPtr &msg_ci)
+
 {
     // camera intrinsics for rectified images
     const std::array<double, 4> intrinsics = {msg_ci->p.data()[0], msg_ci->p.data()[5], msg_ci->p.data()[2],
@@ -226,7 +239,7 @@ void AprilTagNode::onCamera(const sensor_msgs::msg::Image::ConstSharedPtr &msg_i
     msg_detections.header = msg_img->header;
 
     std::vector<geometry_msgs::msg::TransformStamped> tfs;
-
+    std::cout << "detect " << zarray_size(detections) << " tags !" << std::endl;
     for (int i = 0; i < zarray_size(detections); i++) {
         apriltag_detection_t *det;
         zarray_get(detections, i, &det);
@@ -268,6 +281,96 @@ void AprilTagNode::onCamera(const sensor_msgs::msg::Image::ConstSharedPtr &msg_i
             tf.transform = estimate_pose(det, intrinsics, size);
         }
         // 法2
+        // getPose(*(det->H), Pinv, tf.transform, tag_sizes.count(det->id) ? tag_sizes.at(det->id) : tag_edge_size);
+
+        tfs.push_back(tf);
+    }
+
+    pub_detections->publish(msg_detections);
+    tf_broadcaster.sendTransform(tfs);
+
+    apriltag_detections_destroy(detections);
+}
+
+void AprilTagNode::cameraInfoCallback(const sensor_msgs::msg::CameraInfo::ConstSharedPtr &msg_ci)
+
+{
+    if (intrinsics_) {
+        return;
+    }
+
+    intrinsics_ = std::make_unique<std::array<double, 4>>(
+        std::array<double, 4>{msg_ci->p.data()[0], msg_ci->p.data()[5], msg_ci->p.data()[2], msg_ci->p.data()[6]});
+    std::cout << "intrinsics: " << (*intrinsics_)[0] << "," << (*intrinsics_)[1] << "," << (*intrinsics_)[2] << ","
+              << (*intrinsics_)[3] << std::endl;
+}
+
+void AprilTagNode::imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr &msg_img)
+
+{
+    if (!intrinsics_) {
+        return;
+    }
+    // // 法2: precompute inverse projection matrix
+    // const Mat3 Pinv =
+    //     Eigen::Map<const Eigen::Matrix<double, 3, 4, Eigen::RowMajor>>(msg_ci->p.data()).leftCols<3>().inverse();
+
+    const cv::Mat img_uint8 = cv_bridge::toCvShare(msg_img, "mono8")->image;
+    image_u8_t im{img_uint8.cols, img_uint8.rows, img_uint8.cols, img_uint8.data};
+
+    // detect tags
+    mutex.lock();
+    zarray_t *detections = apriltag_detector_detect(td, &im);
+    mutex.unlock();
+
+    if (profile) timeprofile_display(td->tp);
+
+    apriltag_msgs::msg::AprilTagDetectionArray msg_detections;
+    msg_detections.header = msg_img->header;
+
+    std::vector<geometry_msgs::msg::TransformStamped> tfs;
+    std::cout << "lumen " << "detect " << zarray_size(detections) << " tags !" << std::endl;
+    for (int i = 0; i < zarray_size(detections); i++) {
+        apriltag_detection_t *det;
+        zarray_get(detections, i, &det);
+
+        RCLCPP_DEBUG(get_logger(), "detection %3d: id (%2dx%2d)-%-4d, hamming %d, margin %8.3f\n", i,
+                     det->family->nbits, det->family->h, det->id, det->hamming, det->decision_margin);
+
+        // ignore untracked tags
+        if (!tag_frames.empty() && !tag_frames.count(det->id)) {
+            continue;
+        }
+
+        // reject detections with more corrected bits than allowed
+        if (det->hamming > max_hamming) {
+            continue;
+        }
+
+        // detection
+        apriltag_msgs::msg::AprilTagDetection msg_detection;
+        msg_detection.family = std::string(det->family->name);
+        msg_detection.id = det->id;
+        msg_detection.hamming = det->hamming;
+        msg_detection.decision_margin = det->decision_margin;
+        msg_detection.centre.x = det->c[0];
+        msg_detection.centre.y = det->c[1];
+        std::memcpy(msg_detection.corners.data(), det->p, sizeof(double) * 8);
+        std::memcpy(msg_detection.homography.data(), det->H->data, sizeof(double) * 9);
+        msg_detections.detections.push_back(msg_detection);
+
+        // 3D orientation and position
+        geometry_msgs::msg::TransformStamped tf;
+        tf.header = msg_img->header;
+        // set child frame name by generic tag name or configured tag name
+        tf.child_frame_id = tag_frames.count(det->id) ? tag_frames.at(det->id)
+                                                      : std::string(det->family->name) + ":" + std::to_string(det->id);
+        const double size = tag_sizes.count(det->id) ? tag_sizes.at(det->id) : tag_edge_size;
+        // 法1
+        if (estimate_pose != nullptr) {
+            tf.transform = estimate_pose(det, *intrinsics_, size);
+        }
+        // // 法2
         // getPose(*(det->H), Pinv, tf.transform, tag_sizes.count(det->id) ? tag_sizes.at(det->id) : tag_edge_size);
 
         tfs.push_back(tf);

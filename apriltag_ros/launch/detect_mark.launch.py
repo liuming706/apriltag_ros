@@ -27,16 +27,23 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
 
-    config = os.path.join(get_package_share_directory("apriltag_ros"), "cfg", "tags_36h11.yaml")
+    config = os.path.join(
+        get_package_share_directory("apriltag_ros"), "cfg", "tags_36h11.yaml"
+    )
     apriltag_node = Node(
-        package = 'apriltag_ros',
-        executable = 'apriltag_node',
-        parameters = [config],
-        remappings=[("/image_rect", "/camera/image_raw"), ("/camera_info", "/camera/camera_info")],
-        output = 'screen',
-        )
+        package="apriltag_ros",
+        executable="apriltag_node",
+        parameters=[config],
+        remappings=[
+            ("/image", "/sensor/camera/stereo_left/image/raw"),
+            (
+                "camera_info",
+                "/sensor/camera/stereo_left/image/info",
+            ),
+        ],
+        output="screen",
+    )
 
     ld = LaunchDescription()
     ld.add_action(apriltag_node)
     return ld
-
