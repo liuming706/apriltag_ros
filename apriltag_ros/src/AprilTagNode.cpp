@@ -357,7 +357,6 @@ void AprilTagNode::imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr &
         msg_detection.centre.y = det->c[1];
         std::memcpy(msg_detection.corners.data(), det->p, sizeof(double) * 8);
         std::memcpy(msg_detection.homography.data(), det->H->data, sizeof(double) * 9);
-        msg_detections.detections.push_back(msg_detection);
 
         // 3D orientation and position
         geometry_msgs::msg::TransformStamped tf;
@@ -369,16 +368,21 @@ void AprilTagNode::imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr &
         // 法1
         if (estimate_pose != nullptr) {
             tf.transform = estimate_pose(det, *intrinsics_, size);
+            msg_detection.pose.pose.pose.position.x = tf.transform.translation.x;
+            msg_detection.pose.pose.pose.position.y = tf.transform.translation.y;
+            msg_detection.pose.pose.pose.position.z = tf.transform.translation.z;
+            msg_detection.pose.pose.pose.orientation.w = tf.transform.rotation.w;
+            msg_detection.pose.pose.pose.orientation.x = tf.transform.rotation.x;
+            msg_detection.pose.pose.pose.orientation.y = tf.transform.rotation.y;
+            msg_detection.pose.pose.pose.orientation.z = tf.transform.rotation.z;
         }
         // // 法2
         // getPose(*(det->H), Pinv, tf.transform, tag_sizes.count(det->id) ? tag_sizes.at(det->id) : tag_edge_size);
-
+        msg_detections.detections.push_back(msg_detection);
         tfs.push_back(tf);
     }
-
-    pub_detections->publish(msg_detections);
     tf_broadcaster.sendTransform(tfs);
-
+    pub_detections->publish(msg_detections);
     apriltag_detections_destroy(detections);
 }
 
