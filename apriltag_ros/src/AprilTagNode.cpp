@@ -152,11 +152,14 @@ AprilTagNode::AprilTagNode(const rclcpp::NodeOptions &options) :
     const auto ids = declare_parameter("tag.ids", std::vector<int64_t>{}, descr("tag ids", true));
     const auto frames = declare_parameter("tag.frames", std::vector<std::string>{}, descr("tag frame names per id", true));
     const auto sizes = declare_parameter("tag.sizes", std::vector<double>{}, descr("tag sizes per id", true));
+    const auto K = declare_parameter("camera.K", std::vector<double>(), descr("K", true));
 
     // get method for estimating tag pose
-    estimate_pose = pose_estimation_methods.at(
+    auto method =
         declare_parameter("pose_estimation_method", "pnp",
-                          descr("pose estimation method: \"pnp\" (more accurate) or \"homography\" (faster)", true)));
+                          descr("pose estimation method: \"pnp\" (more accurate) or \"homography\" (faster)", true));
+    std::cout << "pose_estimation_method: " << method << std::endl;
+    estimate_pose = pose_estimation_methods.at(method);
 
     // detector parameters in "detector" namespace
     declare_parameter("detector.threads", td->nthreads, descr("number of threads"));
@@ -168,7 +171,6 @@ AprilTagNode::AprilTagNode(const rclcpp::NodeOptions &options) :
 
     declare_parameter("max_hamming", 0, descr("reject detections with more corrected bits than allowed"));
     declare_parameter("profile", false, descr("print profiling information to stdout"));
-
     if (!frames.empty()) {
         if (ids.size() != frames.size()) {
             throw std::runtime_error("Number of tag ids (" + std::to_string(ids.size()) + ") and frames (" +
@@ -197,11 +199,22 @@ AprilTagNode::AprilTagNode(const rclcpp::NodeOptions &options) :
     } else {
         throw std::runtime_error("Unsupported tag family: " + tag_family);
     }
-    sub_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
-        this->get_node_topics_interface()->resolve_topic_name("camera_info"), 10,
-        std::bind(&AprilTagNode::cameraInfoCallback, this, std::placeholders::_1));
+    if (K.size() != 4) {
+        sub_camera_info_ = this->create_subscription<sensor_msgs::msg::CameraInfo>(
+            this->get_node_topics_interface()->resolve_topic_name("camera_info"), 10,
+            std::bind(&AprilTagNode::cameraInfoCallback, this, std::placeholders::_1));
+    } else {
+        intrinsics_ = std::make_unique<std::array<double, 4>>();
+        intrinsics_->at(0) = K[0];
+        intrinsics_->at(1) = K[1];
+        intrinsics_->at(2) = K[2];
+        intrinsics_->at(3) = K[3];
+        std::cout << "intrinsics (fx,fy,cx,cy): " << (*intrinsics_)[0] << "," << (*intrinsics_)[1] << ","
+                  << (*intrinsics_)[2] << "," << (*intrinsics_)[3] << std::endl;
+    }
+
     sub_img_ = this->create_subscription<sensor_msgs::msg::Image>(
-        this->get_node_topics_interface()->resolve_topic_name("image"), 10,
+        this->get_node_topics_interface()->resolve_topic_name("image"), rclcpp::SensorDataQoS(),
         std::bind(&AprilTagNode::imageCallback, this, std::placeholders::_1));
 }
 
@@ -329,7 +342,8 @@ void AprilTagNode::imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr &
     msg_detections.header = msg_img->header;
 
     std::vector<geometry_msgs::msg::TransformStamped> tfs;
-    std::cout << "lumen " << "detect " << zarray_size(detections) << " tags !" << std::endl;
+    std::cout << "detect " << zarray_size(detections) << " tags !" << std::endl;
+
     for (int i = 0; i < zarray_size(detections); i++) {
         apriltag_detection_t *det;
         zarray_get(detections, i, &det);
