@@ -36,7 +36,7 @@ endif()
 find_package(rclcpp REQUIRED)
 find_package(rclcpp_components REQUIRED)
 find_package(sensor_msgs REQUIRED)
-find_package(apriltag_msgs REQUIRED)
+find_package(sensor_task_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(image_transport REQUIRED)
 find_package(cv_bridge REQUIRED)
@@ -75,7 +75,7 @@ ament_target_dependencies(
   rclcpp
   rclcpp_components
   sensor_msgs
-  apriltag_msgs
+  sensor_task_msgs
   tf2_ros
   image_transport
   cv_bridge)

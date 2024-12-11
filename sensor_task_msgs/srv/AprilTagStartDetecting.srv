@@ -1,0 +1,8 @@
+bool start_detecting
+string img_topic_name
+int32 tag_id
+float32 tag_size
+string tag_frame
+---
+rosa_msgs/NodeState state
+bool ok

@@ -14,7 +14,7 @@
   <depend>rclcpp_components</depend>
   <depend>sensor_msgs</depend>
   <depend>tf2_ros</depend>
-  <depend>apriltag_msgs</depend>
+  <depend>sensor_task_msgs</depend>
   <depend>apriltag</depend>
   <depend>image_transport</depend>
   <depend>cv_bridge</depend>

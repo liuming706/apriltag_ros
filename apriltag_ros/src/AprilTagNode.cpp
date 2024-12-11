@@ -1,7 +1,9 @@
 // ros
 #include "pose_estimation.hpp"
-#include <apriltag_msgs/msg/april_tag_detection.hpp>
-#include <apriltag_msgs/msg/april_tag_detection_array.hpp>
+
+#include <sensor_task_msgs/msg/april_tag_detection.hpp>
+#include <sensor_task_msgs/msg/april_tag_detection_array.hpp>
+
 #ifdef cv_bridge_HPP
 #include <cv_bridge/cv_bridge.hpp>
 #else
@@ -123,7 +125,7 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr sub_img_;
     rclcpp::Subscription<sensor_msgs::msg::CameraInfo>::SharedPtr sub_camera_info_;
 
-    const rclcpp::Publisher<apriltag_msgs::msg::AprilTagDetectionArray>::SharedPtr pub_detections;
+    const rclcpp::Publisher<sensor_task_msgs::msg::AprilTagDetectionArray>::SharedPtr pub_detections;
     tf2_ros::TransformBroadcaster tf_broadcaster;
     std::unique_ptr<std::array<double, 4>> intrinsics_{nullptr};
     pose_estimation_f estimate_pose = nullptr;
@@ -141,7 +143,10 @@ AprilTagNode::AprilTagNode(const rclcpp::NodeOptions &options) :
     //     this, this->get_node_topics_interface()->resolve_topic_name("image_rect"),
     //     std::bind(&AprilTagNode::onCamera, this, std::placeholders::_1, std::placeholders::_2),
     //     declare_parameter("image_transport", "raw", descr({}, true)), rmw_qos_profile_sensor_data)),
-    pub_detections(create_publisher<apriltag_msgs::msg::AprilTagDetectionArray>("detections", rclcpp::SensorDataQoS())),
+    pub_detections(create_publisher<sensor_task_msgs::msg::AprilTagDetectionArray>(
+        declare_parameter("apriltag_detetion_topic", "/sensor/camera/waist_front_rgbd/april_tag/results",
+                          descr("apriltag_detetion_topic", true)),
+        rclcpp::SensorDataQoS())),
     tf_broadcaster(this)
 {
     // read-only parameters
@@ -248,7 +253,7 @@ void AprilTagNode::onCamera(const sensor_msgs::msg::Image::ConstSharedPtr &msg_i
 
     if (profile) timeprofile_display(td->tp);
 
-    apriltag_msgs::msg::AprilTagDetectionArray msg_detections;
+    sensor_task_msgs::msg::AprilTagDetectionArray msg_detections;
     msg_detections.header = msg_img->header;
 
     std::vector<geometry_msgs::msg::TransformStamped> tfs;
@@ -271,7 +276,7 @@ void AprilTagNode::onCamera(const sensor_msgs::msg::Image::ConstSharedPtr &msg_i
         }
 
         // detection
-        apriltag_msgs::msg::AprilTagDetection msg_detection;
+        sensor_task_msgs::msg::AprilTagDetection msg_detection;
         msg_detection.family = std::string(det->family->name);
         msg_detection.id = det->id;
         msg_detection.hamming = det->hamming;
@@ -338,7 +343,7 @@ void AprilTagNode::imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr &
 
     if (profile) timeprofile_display(td->tp);
 
-    apriltag_msgs::msg::AprilTagDetectionArray msg_detections;
+    sensor_task_msgs::msg::AprilTagDetectionArray msg_detections;
     msg_detections.header = msg_img->header;
 
     std::vector<geometry_msgs::msg::TransformStamped> tfs;
@@ -362,7 +367,7 @@ void AprilTagNode::imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr &
         }
 
         // detection
-        apriltag_msgs::msg::AprilTagDetection msg_detection;
+        sensor_task_msgs::msg::AprilTagDetection msg_detection;
         msg_detection.family = std::string(det->family->name);
         msg_detection.id = det->id;
         msg_detection.hamming = det->hamming;

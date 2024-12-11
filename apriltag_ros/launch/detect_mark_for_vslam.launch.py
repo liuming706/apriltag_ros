@@ -35,7 +35,7 @@ def generate_launch_description():
         executable="apriltag_node",
         parameters=[config],
         remappings=[
-            ("/image", "/sensor/camera/stereo_left/image/raw"),
+            ("/image", "/sensor/camera/waist_front_rgbd/color/raw"),
             (
                 "/camera_info",
                 "/camera/camera_info",

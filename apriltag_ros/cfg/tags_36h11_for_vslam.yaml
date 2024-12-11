@@ -1,6 +1,7 @@
 /**:
     ros__parameters:
         image_transport: raw # image format
+        apriltag_detetion_topic: /sensor/camera/waist_front_rgbd/april_tag/results
         family: 36h11 # tag family name
         size: 0.16 # tag edge size in meter
         max_hamming: 0 # maximum allowed hamming distance (corrected bits)
@@ -13,7 +14,8 @@
             sharpening: 0.25 # sharpening of decoded images
             debug: False # write additional debugging images to current working directory
         camera:
-            K: [320.25492609007654, 320.25492609007654, 320.0, 240.0] # camera intrinsics: fx,fy,cx,cy
+            #K: [320.25492609007654, 320.25492609007654, 320.0, 240.0] # camera intrinsics: fx,fy,cx,cy
+            K: [457.84999843514953, 457.84999843514953, 320.0, 240.0] # camera intrinsics: fx,fy,cx,cy
         pose_estimation_method: pnp # pose estimation method: pnp (more accurate) or homography (faster)
         # optional list of tags
         #tag:
