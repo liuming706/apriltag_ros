@@ -1,0 +1,16 @@
+---
+BasedOnStyle: Google
+AlignAfterOpenBracket: AlwaysBreak
+AlignEscapedNewlines: Left
+AllowShortFunctionsOnASingleLine: InlineOnly
+# AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeBraces: Allman
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+IncludeBlocks: Preserve
+IndentCaseLabels: true
+NamespaceIndentation: All
+PointerAlignment: Left
+SortIncludes: false
+TabWidth: 2
