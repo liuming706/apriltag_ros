@@ -400,8 +400,10 @@ void AprilTagNode::imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr &
         msg_detections.detections.push_back(msg_detection);
         tfs.push_back(tf);
     }
-    tf_broadcaster.sendTransform(tfs);
-    pub_detections->publish(msg_detections);
+    if (!msg_detections.detections.empty()) {
+        tf_broadcaster.sendTransform(tfs);
+        pub_detections->publish(msg_detections);
+    }
     apriltag_detections_destroy(detections);
 }
 
